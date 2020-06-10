@@ -77,7 +77,7 @@ def delete_todo(id):
     todo = Todo.query.get(id)
     db.session.delete(todo)
     db.session.commit()
-    return jsonify(f"Todo with Title: {todo.title} Deleted!")
+    return jsonify(f"Todo with Title: '{todo.title}' Deleted!")
 
 
 if __name__ == "__main__":
