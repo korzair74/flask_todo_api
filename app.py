@@ -11,7 +11,7 @@ heroku = Heroku(app)
 CORS(app)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('DATABASE_URI')
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('DATABASE_URL')
 os.path.join(basedir, "app.sqlite")
 
 
